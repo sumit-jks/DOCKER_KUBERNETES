@@ -1,0 +1,17 @@
+---
+nginx: 
+  image: nginx
+
+
+
+nginx-2: 
+  image: nginx
+  ports:
+  - '8087:80'
+
+myappache: 
+  image: mywebapache:v4 
+  volumes: 
+  - /root/docker-swarm-kuberenetes-ericsson-30-May-2022/01-Docker/01-Docker-Basic/02-Dockerfile/apache/v3:/var/www/html/myapp 
+  ports:
+  - '8085:80'
